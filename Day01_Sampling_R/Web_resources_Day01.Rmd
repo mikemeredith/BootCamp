@@ -1,0 +1,49 @@
+---
+title: "Web resources for Day 1 of the Boot Camp"
+output: html_document
+---
+
+Here are some useful links to resources on the internet relevant to Day 1 of the Boot Camp.
+
+## General
+
+Check the [BCSS website](http://bcss.org.my/) for practical details. Look for the link to the materials for the Boot Camp in the top-right corner.
+
+WCS Malaysia Program web site has an [analysis section](http://wcsmalaysia.org/analysis/default.htm)
+with online versions of a lot of the Boot Camp materials, though it may not incorporate the latest changes.
+
+[Mike Meredith's web site](http://mikemeredith.net/) has information on a few special topics.
+
+## Binomial distribution
+
+The [Khan Academy binomial page](https://www.khanacademy.org/math/probability/random-variables-topic/binomial_distribution/v/binomial-distribution) has a series of videos.
+
+Rather more academic in tone is the [StatTrek page](http://stattrek.com/probability-distributions/binomial.aspx).
+
+And of course there's [Wikipedia](https://en.wikipedia.org/wiki/Binomial_distribution).
+
+## Poisson distribution
+
+There's a nice [biography of Poisson](http://www-history.mcs.st-and.ac.uk/Biographies/Poisson.html) at the St Andrews University site.
+
+[Khan Academy](https://www.khanacademy.org/math/probability/random-variables-topic/poisson_process/v/poisson-process-1) relates the theory of the Poisson process to the binomial distribution.
+
+There are also pages at [StatTrek](http://stattrek.com/probability-distributions/poisson.aspx) and [Wikipedia](http://en.wikipedia.org/wiki/Poisson_distribution).
+
+## R software
+
+There are lots of resources on the web for learning R. Here are a couple of thorough introductions:
+
+- [Learn R From Scratch](http://datascienceplus.com/learn-r-from-scratch-part-1/) is a series of screencasts showing R operations.
+
+- [DataCamp course](https://www.datacamp.com/courses/free-introduction-to-r) is a free course with tutorials interspersed with exercises.
+
+For trouble-shooting, the best strategy is to copy-paste the most informative bit of the error message into a search engine. Look for hits in StackOverflow or StackExchange, which are much more user-friendy than the R-help forum, still operating as an email list.
+
+We  have started to put together a few of the [Frequently Encountered Errors in R (FEER)](http://wcsmalaysia.org/analysis/R_commonErrors.htm) which come up regularly in Boot Camps.
+
+
+
+_Please let us know if any of these links does not work._
+
+
