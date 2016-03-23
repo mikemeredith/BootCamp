@@ -1,0 +1,14 @@
+---
+title: "Web resources for Day 4 of the Boot Camp"
+output: html_document
+---
+
+Here are some useful links to resources on the internet relevant to Day 4 of the Boot Camp.
+
+Burnham et al's 2011 [paper on AIC](http://www.ericlwalters.org/Burnham_etal_2011.pdf)
+
+A [biography of Ronald Fisher](http://www-history.mcs.st-andrews.ac.uk/Biographies/Fisher.html) at the St Andrews University site.
+
+_Please let us know if any of these links does not work._
+
+

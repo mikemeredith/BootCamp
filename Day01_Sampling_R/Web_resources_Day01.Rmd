@@ -38,6 +38,12 @@ There are lots of resources on the web for learning R. Here are a couple of thor
 
 - [DataCamp course](https://www.datacamp.com/courses/free-introduction-to-r) is a free course with tutorials interspersed with exercises.
 
+Here are two tutorials that have something to say about using R on Macs:
+
+- [Bill King's tutorial](http://ww2.coastal.edu/kingw/statistics/R-tutorials/index.html) at Coastal Carolina U.
+
+- [Using R for Windows and Macintosh](http://web.stanford.edu/group/ssds/cgi-bin/drupal/files/Guides/Using%20R%20for%20Windows%20and%20Macintosh_1.pdf) from Stanford.
+
 For trouble-shooting, the best strategy is to copy-paste the most informative bit of the error message into a search engine. Look for hits in StackOverflow or StackExchange, which are much more user-friendy than the R-help forum, still operating as an email list.
 
 We  have started to put together a few of the [Frequently Encountered Errors in R (FEER)](http://wcsmalaysia.org/analysis/R_commonErrors.htm) which come up regularly in Boot Camps.

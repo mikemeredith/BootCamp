@@ -1,0 +1,14 @@
+---
+title: "Web resources for Day 7 of the Boot Camp"
+output: html_document
+---
+
+Here are some useful links to resources on the internet relevant to Day 7 of the Boot Camp.
+
+MacKenzie et al 2002 [paper](http://www.uvm.edu/rsenr/vtcfwru/spreadsheets/occupancy/Occupancy%20Exercises/Exercise3/MacKenzie%20et%20al.%20single-season.pdf) on estimating site occupancy
+
+Wibisono et al 2011 [paper](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0025931)  on Tiger population assessment in Sumatra
+
+_Please let us know if any of these links does not work._
+
+

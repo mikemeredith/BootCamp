@@ -1,0 +1,18 @@
+---
+title: "Web resources for Day 2 of the Boot Camp"
+output: html_document
+---
+
+Here are some useful links to resources on the internet relevant to Day 2 of the Boot Camp.
+
+There's an introductory statistics course for college students using a Bayesian approach and with a lot of information on probability theory [here](http://bayes.bgsu.edu/nsf_web/main.htm).
+
+Here's a [BBC article](http://www.bbc.com/news/magazine-28166019) on doctors' underatanding of diagnostic test results.
+
+There's a nice [biography of Poisson](http://www-history.mcs.st-and.ac.uk/Biographies/Poisson.html) at the St Andrews University site.
+
+More about [Mean, Median and Mode](http://math.about.com/od/statistics/a/MeanMedian.htm) here.
+
+_Please let us know if any of these links does not work._
+
+

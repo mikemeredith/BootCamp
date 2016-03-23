@@ -1,0 +1,14 @@
+---
+title: "Web resources for Day 5 of the Boot Camp"
+output: html_document
+---
+
+Here are some useful links to resources on the internet relevant to Day 5 of the Boot Camp.
+
+The [design scheme](wcsmalaysia.org/analysis/Design_overview.htm) at the wcsmalaysia.org site.
+
+Ramage et al's [paper](210.72.92.31/bitstream/353005/3909/1/Pseudoreplication%20in%20Tropical%20Forests%20and%20the%20Resulting%20Effects%20on%20Biodiversity%20Conservation.pdf) on pseudoreplication.
+
+_Please let us know if any of these links does not work._
+
+

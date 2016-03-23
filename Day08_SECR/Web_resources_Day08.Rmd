@@ -1,0 +1,14 @@
+---
+title: "Web resources for Day 8 of the Boot Camp"
+output: html_document
+---
+
+Here are some useful links to resources on the internet relevant to Day 8 of the Boot Camp.
+
+Murray Efford et al's [book chapter](http://www.otago.ac.nz/density/pdfs/Efford%20Borchers%20&%20Byrom%202009.pdf) on SECR.
+
+Mike Meredith's [blog](http://mikemeredith.net/blog/1308_Trap_layout_for_SECR.htm)  on trap layout simulations.
+
+_Please let us know if any of these links does not work._
+
+

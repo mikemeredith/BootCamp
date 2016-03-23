@@ -1,0 +1,14 @@
+---
+title: "Web resources for Day 9 of the Boot Camp"
+output: html_document
+---
+
+Here are some useful links to resources on the internet relevant to Day 9 of the Boot Camp.
+
+Here is the [Wikipedia page](https://en.wikipedia.org/wiki/Kanha_Tiger_Reserve) for Kanha Tiger Reserve.
+
+Lebreton et al's  [paper](http://multievent.sciencesconf.org/conference/multievent/pages/Lebreton_EcoMonog_1992.pdf)  with the original dipper data analysis, and several other examples too.
+
+_Please let us know if any of these links does not work._
+
+

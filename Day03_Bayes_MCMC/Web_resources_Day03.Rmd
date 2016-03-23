@@ -1,0 +1,16 @@
+---
+title: "Web resources for Day 3 of the Boot Camp"
+output: html_document
+---
+
+Here are some useful links to resources on the internet relevant to Day 3 of the Boot Camp.
+
+There are videos from Khan Academy on [probability density functions](https://www.khanacademy.org/math/probability/random-variables-topic/random_variables_prob_dist/v/probability-density-functions) and on the [normal distribution](https://www.khanacademy.org/math/probability/statistics-inferential/normal_distribution/v/introduction-to-the-normal-distribution).
+
+And here are the StatTrek pages on [probability density functions](http://stattrek.com/statistics/dictionary.aspx?definition=Probability_density_function) and on the [normal distribution](http://stattrek.com/probability-distributions/normal.aspx).
+
+[John Kruschke's blog](http://doingbayesiandataanalysis.blogspot.my/2013/09/cool-visualization-of-metropolis.html) has a cool animation of 3 MCMC chains.
+
+_Please let us know if any of these links does not work._
+
+
