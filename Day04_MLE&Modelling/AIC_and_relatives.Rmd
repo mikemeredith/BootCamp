@@ -1,0 +1,93 @@
+---
+title: "AIC and relatives"
+output: pdf_document
+---
+
+## Basic definitions and formulae
+
+$\mathit{K}$ = number of parameters estimated from the data, $\mathit{n}$ = sample size, $\mathcal{L}$ = maximised likelihood
+
+Akaike's Information Criterion: $$AIC =  -2\mathrm{log}(\mathcal{L}) + 2K$$
+
+The model with the lowest AIC should give the best predictions when applied to a fresh data set; it gives approximately the same results as cross-validation. That we are actually evaluating our model based on the same data set means that we tend to be over-optimistic about our predicitive ability, and the second term tries to correct for this "optimism".
+
+AIC is an approximation which works fine if $\mathit{n}$ is large, much larger than $\mathit{K}$. A better approximation is this: $$AICc =  AIC + \frac{2K(K+1)}{n-K-1}$$
+
+The extra term is known as the "small sample correction", but AICc is better than AIC even for large samples. For some models it's not clear what is $\mathit{n}$: for an occupancy model, should this be the number of sites or the total number of visits to sites?
+
+AICc can also be expressed as: $$AICc =  -2\mathrm{log}(\mathcal{L}) + \frac{2Kn}{n-K-1}$$
+
+Binomial and Poisson distributions do not have a seperate parameter for spread ("dispersion"); this is theoretically determined by other parameters. In practice, the spread is often greater than it should be, and an overdispersion parameter (usually named $\hat{c}$, c-hat by biologists) is estimated as used to correct variances and confidence intervals. The correction must also be applied to AIC, resulting in a Quasi-AIC: $$QAIC =  \frac{-2\mathrm{log}(\mathcal{L})}{\hat{c}} + 2K$$
+
+where the number of parameters, $\mathit{K}$, must include $\hat{c}$. And there's a small-sample-correction version too: $$QAICc = QAIC + \frac{2K(K+1)}{n-K-1}$$
+
+The Bayesian or Schwarz Information Criterion is: $$BIC =  -2\mathrm{log}(\mathcal{L}) + \mathrm{log}(n)K$$
+
+This implies a greater penalty for extra parameters, and the BIC-lowest models are simpler than AIC-lowest models. There's nothing Bayesian about the calculation of BIC, but it does tend to give the same results as model selection using Bayes factors.
+
+You may also come across something called the "Consistent AIC" (see Bozdogan (1987), Anderson et al (1998)), which is: $$CAIC =  -2\mathrm{log}(\mathcal{L}) + (\mathrm{log}(n)+1)K$$
+
+## Values derived from information criteria
+
+In this section we'll refer to AIC, but the exact same calculations can be done based on any of the other information criteria.
+
+### Delta AIC, $\Delta$
+
+The values of AIC are not important, it's the differences which matter: $\Delta_i = AIC_i - AIC_{min}$. Two points to bear in mind:
+
+* Adding a totally uninformative parameter to a model (eg, rolling a die), will increase AIC by < 2 units. If an extra parameter is providing useful information, the model will have a *lower* AIC than the model without it. Such models are not supported (B&A p131, Arnold 2010).
+
+* If $\Delta$ is small, there is uncertainty about which model is best. A model with $\Delta$ < 2 has substantial support from the data, while a model with $\Delta$ > 10 has essentially none (B&A p70).
+
+### Model likelihood
+
+You can think of the model likelihood as an adjusted version of the maximised likelihood, $\mathcal{L}$, which has been adjusted to allow for the number of parameters in the model and standardised so that the best model has likelihood = 1. It is calculated by "undoing" the -2log() operation, so: $$\mathrm{model likelihood} = e^{-\frac{1}{2}\Delta_i}$$
+
+You can use ratios of model likelihoods to compare two models; the comparison does not depend on which other models are in the set.
+
+### Model weights or Akaike weights
+
+Model weights are in the same proportions as the model likelihoods, but all the weights in the set add up to 1. So:
+
+model weight = model likelihood / sum of likelihoods of all the models in the set.
+
+Model weights *do* depend on all the other models in the set. Beware of model redundancy, ie, having 2 models in the set which are equivalent, even if they appear to be parameterised differently (redundant models will generally have identical values of $\mathcal{L}$). The model weight can be regarded as the probability that the model is actually the best predictor in the set (B&A pp75-77).
+
+### Model averaging
+
+Often 2 or more models will have substantial weight, and there is uncertainty as to which to use for prediction. The strategy then is to calculate predictions from each of the plausible models and produce weighted averages of the predictions, using model weights. Do not try to obtain model-averaged values of the parameters, as they will have different interpretations in different models.
+
+### Sum of weights
+
+One approach to identifying important covariates is to calculate AIC for a set of models, where each model including a covariate is matched by an equivalent model excluding the covariate. The sum of model weights (SW) for the models including the covariate is interpreted as a measure of the covariate's importance.
+
+BUT based on simulations, Galipaud et al (2014) concluded: "it is likely that in most situations, SW is a poor estimate of variable's importance."
+
+The problem appears to be that AIC (and its relatives) are designed to identify the best models for prediction, and are of little use in assessing individual covariates. 
+
+## Bayesian model-selection criteria
+
+In Bayesian analysis, we don't calculate a maximised likelihood, $\mathcal{L}$, when estimating parameters. Instead we can use the "posterior predictive density", based on the probability of observing the data given the posterior distributions of the parameters. To this is added a term representing our "optimism". The calculations are rather involved, but there are 3 options, all of which work like AIC, ie, lowest is best.
+
+* DIC, deviance information criterion, included in the output of many packages based on BUGS or JAGS; not valid for hierarchical models, which include most of our ecological examples (occupancy, mark-recapture, etc).
+
+* WAIC, widely-applicable information criterion or Watanabe-Akaike information criterion; valid for hierarchical models provided observations are independant; cannot be used for models with spatial or temporal autocorrelation.
+
+* posterior predictive loss; valid when observations are not independent.
+
+See Hooten & Hobbs (2015) for a discussion of these criteria.
+
+## References
+
+Anderson, D.R., Burnham, K.P., & White, G.C. (1998) Comparison of Akaike information criterion and consistent Akaike information criterion for model selection and statistical inference for capture-recapture studies. _Journal of Applied Statistics_, 25, 263-282.
+
+Arnold, T.W. (2010) Uninformative parameters and model selection using Akaike’s Information Criterion. _Journal of Wildlife Management_, 74, 1175-1178.
+
+Bozdogan, H. (1987) Model selection and Akaike's Information Criterion (AIC): The general theory and its analytical extensions. _Psychometrika_, 52, 345-370.
+
+**B&A** Burnham, K.P. & Anderson, D.R. (2002) _Model selection and multimodel inference: a practical information-theoretic approach_, 2 edn. Springer-Verlag.
+
+Galipaud, M., Gillingham, M.A.F., David, M., & Dechaume-Moncharmont, F.-X. (2014) Ecologists overestimate the importance of predictor variables in model averaging: a plea for cautious interpretations. _Methods in Ecology and Evolution_, 5, 983-991.
+
+Hooten, M.B. & Hobbs, N.T. (2015) A guide to Bayesian model selection for ecologists. _Ecological Monographs_, 85, 3-28.
+ 
